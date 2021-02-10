@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Customer's Register</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/skeleton/2.0.4/skeleton.css"
+      integrity="sha512-5fsy+3xG8N/1PV5MIJz9ZsWpkltijBI48gBzQ/Z2eVATePGHOkMIn+xTDHIfTZFVb9GMpflF2wOWItqxAP2oLQ=="
+      crossorigin="anonymous"
+    />
+  </head>
+  <style>
+    #clear {
+      background-color: red;
+      color: white;
+    }
+    #row {
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+    }
+    .flex-child {
+      /* border: solid 1px black; */
+      width: 30%;
+      margin: 2rem 0;
+    }
+    .costomer-btn {
+      background-color: green;
+      color: white;
+    }
+    .customer-details {
+      width: 20%;
+    }
+    .errorMessage {
+      background-color: red;
+      color: white;
+    }
+    .successMessage {
+      background-color: green;
+      color: white;
+    }
+  </style>
+  <body>
+    <div class="container" id="container">
+      <h2>COMSTOMER'S REGISTER</h2>
+      <form id="form">
+        <label for="first name">First Name</label>
+        <input
+          type="text"
+          placeholder="Enter First Name"
+          class="u-full-width"
+          id="firstName"
+        />
+        <label for="last name">Last Name</label>
+        <input
+          type="text"
+          placeholder="Enter Last Name"
+          class="u-full-width"
+          id="lastName"
+        />
+        <label for="last name">Phone</label>
+        <input
+          type="number"
+          placeholder="Enter Phone"
+          class="u-full-width"
+          id="phone"
+        />
+        <label for="customer nummber">Customer's Number</label>
+        <input
+          type="number"
+          placeholder="Enter Customer Number"
+          class="u-full-width"
+          id="id"
+        />
+        <button class="button button-primary u-full-width">
+          ADD CUSTOMER TO REGISTER
+        </button>
+      </form>
+      <div class="flex" id="row"></div>
+      <button class="button u-full-width" id="clear">
+        CLEAR ALL CUSTOMERS FROM LIST
+      </button>
+    </div>
+    <script src="app.js"></script>
+  </body>
+</html>
