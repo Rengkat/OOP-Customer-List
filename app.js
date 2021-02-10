@@ -45,17 +45,19 @@ class UI {
     //here is function that deletes user (refractor it into your ui):
     const removeUser = (e) => {
       // to get parentElement - userContainer of a clicked button
-      const user = e.target.parentElement
+      const user = e.target.parentElement;
       // to remove it
-      user.remove()
+      user.remove();
     };
 
     //Since there is not a customer-btn yet, you need to assign eventlistener after creating a user:
-    const deleteButon = document.querySelector(".costomer-btn");
-    //---------------------------------------------^^ here is a typo btw... 
-
-    deleteButon.addEventListener("click", removeUser);
-
+    const deleteButon = document
+      .querySelectorAll(".costomer-btn")
+      //-----------------^^ here is a typo btw...
+      .forEach((btn) => {
+        //i forgot that event listener keeps rewriting its
+        btn.addEventListener("click", removeUser);
+      });
     //-----------END OF EDITS------------//
   }
   clearFileds() {
@@ -140,9 +142,9 @@ document.getElementById("clear").addEventListener("click", () => {
   //here is a fuction to clear all customers (move it into UI):
 
   const clearUsers = () => {
-    //i assume that every flex-child is a user.. 
-    document.querySelectorAll(".flex-child").forEach(user => user.remove())
-  }
+    //i assume that every flex-child is a user..
+    document.querySelectorAll(".flex-child").forEach((user) => user.remove());
+  };
 
   clearUsers();
   //------------------//
